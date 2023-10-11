@@ -1,4 +1,18 @@
-import React from 'react';
-export default function App() {
-  return  <h1 className='text-red-500'>App</h1>
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import SignIn from "./pages/signin";
+import SignUp from "./pages/signup";
+import Profile from "./pages/profile";
+import About from "./pages/about";
+
+export default function App(){
+  return  <BrowserRouter >
+  <Routes>
+    <Route path="/" element={<Home />}/>
+    <Route path="/sign-in" element={<SignIn />}/>
+    <Route path="/sign-up" element={<SignUp/>}/>
+    <Route path="/about" element={<About />}/>
+    <Route path="/profile" element={<Profile />}/>
+  </Routes>
+  </BrowserRouter>;
 }
